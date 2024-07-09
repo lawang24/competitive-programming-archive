@@ -14,3 +14,4 @@ def get_list_int():
 
 def solve():
     
+sys.stdout.write(str(solve()))
