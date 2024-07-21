@@ -1,6 +1,5 @@
 import sys
 
-
 def get_int():
     return int(sys.stdin.readline())
 

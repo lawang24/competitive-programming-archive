@@ -19,11 +19,11 @@ if [[ ! -f "$template_file" ]]; then
   exit 1
 fi
 
-# Check if the new file already exists
-# if [[ -f "$new_file" ]]; then
-#   echo "File $new_file already exists. Aborting to prevent overwrite."
-#   exit 1
-# fi
+Check if the new file already exists
+if [[ -f "$new_file" ]]; then
+  echo "File $new_file already exists. Aborting to prevent overwrite."
+  exit 1
+fi
 
 # Copy the template file to the new file
 cp "$template_file" "$new_file"
@@ -50,7 +50,8 @@ if [ -n "$std_file_name" ]; then
     # Replace all instances of "name" with the provided file_name
     sed -i "" "2i\\
 sys.stdin = open('${std_file_name}.in', 'r')\\
-sys.stdout = open('${std_file_name}.out', 'w')" "$new_file"
+sys.stdout = open('${std_file_name}.out', 'w')\\
+" "$new_file"
 
 fi
 
