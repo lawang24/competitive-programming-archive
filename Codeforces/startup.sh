@@ -2,7 +2,7 @@
 
 # Check if the user provided the number of copies and the prefix as arguments
 if [ -z "$1" ] || [ -z "$2" ]; then
-  echo "Usage: $0 <number_of_copies> <prefix_number>"
+  echo "Usage: $0> <prefix_number> <number_of_copies>"
   exit 1
 fi
 
