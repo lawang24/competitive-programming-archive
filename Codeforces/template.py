@@ -15,18 +15,11 @@ def get_string():
 def get_list_int():
     return list(map(int,get_string().split()))
 
-def solve(x, y, z, k):
-    return ans
+def solve():
 
 t = get_int()
 
 final_result = []
-
-for _ in range(t):
-    x, y, z, k = get_list_int()
-    ans = solve(x, y, z, k)
-    final_result.append(str(ans))
-
 for item in final_result:
     sys.stdout.write(item)
     sys.stdout.write('\n')
