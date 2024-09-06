@@ -15,8 +15,18 @@ def get_string():
 def get_list_int():
     return list(map(int,get_string().split()))
 
+def solve(n,nums):
+    return ' '.join([str(nums[i-1]) for i in range(n)])
+
+t = get_int()
 
 final_result = []
+
+for _ in range(t):
+    n = get_int()
+    nums = get_list_int()
+    final_result.append(solve(n, nums))
+
 for item in final_result:
     sys.stdout.write(item)
     sys.stdout.write('\n')

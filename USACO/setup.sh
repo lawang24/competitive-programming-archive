@@ -19,7 +19,7 @@ if [[ ! -f "$template_file" ]]; then
   exit 1
 fi
 
-Check if the new file already exists
+# Check if the new file already exists
 if [[ -f "$new_file" ]]; then
   echo "File $new_file already exists. Aborting to prevent overwrite."
   exit 1
