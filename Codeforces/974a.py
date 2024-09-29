@@ -25,6 +25,19 @@ final_result = []
 t = get_int()
 
 for _ in range(t):
+    n, k = get_list_int()
+    nums = get_list_int()
+    curr = 0
+    ans = 0
+    for n in nums:
+        if n >= k :
+            curr+=n
+        if n == 0 and curr:
+            curr-=1
+            ans+=1
+    
+    final_result.append(str(ans))
+            
     
     
 for item in final_result:

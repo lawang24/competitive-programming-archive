@@ -1,8 +1,4 @@
 import sys
-from collections import deque
-from collections import Counter
-import math
-import heapq
 
 FILE = 1 # if needed change it while submitting
 
@@ -19,12 +15,24 @@ def get_string():
 def get_list_int():
     return list(map(int,get_string().split()))
 
+def solve(n, x ):
+    ans = 0
+    for a in range(1,n):
+        b = 1
+        while (a*b <= n):
+            c = min(x-a-b, (n-a*b)//(a+b))
+            if c > 0:
+                ans+=c
+            b+=1
+    return ans
 
 final_result = []
 
 t = get_int()
 
 for _ in range(t):
+    n, x = get_list_int()
+    final_result.append(str(solve(n, x)))
     
     
 for item in final_result:

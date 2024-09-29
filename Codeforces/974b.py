@@ -19,15 +19,15 @@ def get_string():
 def get_list_int():
     return list(map(int,get_string().split()))
 
-
 final_result = []
 
 t = get_int()
 
 for _ in range(t):
+    n, k = get_list_int()
+    if (k+n%2)//2%2:
+        print("NO")
+    else:
+        print("YES")
     
-    
-for item in final_result:
-    sys.stdout.write(item)
-    sys.stdout.write('\n')
-
+            

@@ -25,6 +25,20 @@ final_result = []
 t = get_int()
 
 for _ in range(t):
+    n = get_int()
+    a = get_list_int()
+    if n <=2:
+        final_result.append("-1")
+        continue
+    
+    a.sort()
+    middle = a[n // 2]
+    ans = middle * 2 * n - sum(a)
+    if ans < 0 :
+        ans = 0
+    else:
+        ans+=1
+    final_result.append(str(ans))
     
     
 for item in final_result:

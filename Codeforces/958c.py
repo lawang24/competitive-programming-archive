@@ -20,14 +20,21 @@ def get_list_int():
     return list(map(int,get_string().split()))
 
 
-final_result = []
-
 t = get_int()
 
 for _ in range(t):
-    
-    
-for item in final_result:
-    sys.stdout.write(item)
-    sys.stdout.write('\n')
+    n = get_int()
+    _bin = list(bin(n))
+    ans = [str(n)]
+    for i in range(len(_bin)-1, 1, -1):
+        if _bin[i] == '0':
+            continue
+        new = _bin[:]
+        new[i] = '0'
+        new_num = int("".join(new),0)
+        if new_num:
+            ans.append(str(new_num))
+    print(len(ans))
+    print(" ".join(reversed(ans)))    
+
 
