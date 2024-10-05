@@ -18,16 +18,3 @@ def get_string():
 
 def get_list_int():
     return list(map(int,get_string().split()))
-
-
-final_result = []
-
-t = get_int()
-
-for _ in range(t):
-    
-    
-for item in final_result:
-    sys.stdout.write(item)
-    sys.stdout.write('\n')
-
