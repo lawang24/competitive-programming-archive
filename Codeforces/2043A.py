@@ -19,5 +19,20 @@ def get_string():
 def get_list_int():
     return list(map(int,get_string().split()))
 
-def printNumArr(arr):
-    print(" ".join([str(x) for x in arr]))
+t = get_int()
+
+for _ in range(t):
+    
+    x = get_int()
+    if x<=3:
+        print(1)
+        continue
+    
+    ans = 1
+    while x>3:
+        x//=4
+        ans*=2
+    
+    print(ans)
+    
+    
