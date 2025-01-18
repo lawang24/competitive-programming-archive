@@ -25,4 +25,17 @@ def printNumArr(arr):
 t = get_int()
 
 for _ in range(t):
+    n = get_int()
+    
+    a = [0] +  get_list_int()
+    
+    count = 0
+    # count number of subarrays of non-zeros
+    
+    for i in range(1,n+1):
+        if a[i] != 0 and a[i-1] == 0:
+            count+=1
+    
+    print(min(2, count))
+  
     

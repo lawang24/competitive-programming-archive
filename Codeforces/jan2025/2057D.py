@@ -21,8 +21,3 @@ def get_list_int():
 
 def printNumArr(arr):
     print(" ".join([str(x) for x in arr]))
-    
-t = get_int()
-
-for _ in range(t):
-    

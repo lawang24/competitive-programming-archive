@@ -29,35 +29,34 @@ for _ in range(t):
     current = get_list_int()
     target = get_list_int()
     
-    difference = [0 for _ in range(n)]
+    i = 0 
     
-    for i in range(n):
-        if current[i] >= target[i]:
+    while i < n:
+        if current[i] < target[i]:
+            diff = target[i]-current[i]
+            break
+        i+=1
+    
+    if i == n:
+        print('YES')
+        continue
+    
+    flag = True
+    
+    for j in range(n):
+        if i == j:
             continue
         
-        diff = target[i] - current[i]
-        
-        if i-1 >= 0:
-            difference[0] -= diff
-            # get this one to speed
-            difference[i] += diff
-            
-        if i+1 < n:
-            # subtract last diff plus range minus
-            difference[i+1] -= 2* diff
-            
-        difference[i]+= diff
-        
-    adjustment = 0
-    flag = False
-    for i in range(n):
-        adjustment+=difference[i]
-        if current[i] + adjustment < target[i]:
+        excess = current[j] - target[j]
+        if excess < 0 or excess < diff:
             print('NO')
-            flag = True
+            flag = False
             break
+        
+    if flag:
+        print("YES")
     
-    if not flag:
-        print('YES')
-    
+            
+        
+        
             

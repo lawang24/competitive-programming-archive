@@ -23,6 +23,15 @@ def printNumArr(arr):
     print(" ".join([str(x) for x in arr]))
     
 t = get_int()
-
-for _ in range(t):
     
+for _ in range(t):
+    n = get_int()
+    ans = [0 for _ in range(n)]
+    ans[0] = 1
+    ans[1] = 1
+    ans[2] = 2
+    ans[-1] = 2
+    ans[-2] = 1
+    for i in range(3,n-2):
+        ans[i] = i
+    printNumArr(ans)

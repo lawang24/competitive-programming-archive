@@ -25,4 +25,14 @@ def printNumArr(arr):
 t = get_int()
 
 for _ in range(t):
+    n = get_int()
+    a = get_list_int()
+    b = get_list_int()
+    b.append(0)
+    ans = 0
     
+    for i in range(n):
+        ans+= max(0, a[i]-b[i+1])
+        
+    print(ans)
+            

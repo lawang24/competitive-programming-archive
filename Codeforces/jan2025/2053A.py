@@ -26,3 +26,24 @@ t = get_int()
 
 for _ in range(t):
     
+    possible = False
+    
+    n = get_int()
+    nums = get_list_int()
+    
+    for i in range(1,n):
+        a, b = nums[i-1], nums[i]
+        
+        if a>b:
+            a, b = b, a
+        
+        if a > b/2:
+            possible = True
+            break
+        
+    if possible:
+        print('YES')
+    else:
+        print('NO')
+        
+    
