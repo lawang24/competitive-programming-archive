@@ -1,1 +1,1 @@
-Repository of My Competitive Programming Solutions
+Collection of my solutions to competitive programming problems. 
